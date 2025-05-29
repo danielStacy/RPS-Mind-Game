@@ -1,5 +1,7 @@
 import "./style.css";
+import { GameCard } from "./game-logic/GameCard.js";
 
-// Verified. This sure does print in the console of dist/index.html.
-// Feel free to delete when needed.
-console.log("This should print in the console.");
+const gameCard = new GameCard("rock", "win");
+
+const main = document.querySelector(".game-board");
+main.appendChild(gameCard.card);

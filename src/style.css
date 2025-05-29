@@ -7,8 +7,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 body {
@@ -28,4 +27,18 @@ footer {
   display: flex;
   align-items: center;
   margin-left: 3px;
+}
+
+.game-board {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game-card img {
+  width: 200px;
+}
+
+.dir-container p {
+  text-align: center;
 }
