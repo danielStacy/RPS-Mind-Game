@@ -7,4 +7,25 @@
 * {
   margin: 0;
   box-sizing: border-box;
+
+  border: 1px red solid;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-rows: 1fr 10fr 20px;
+}
+
+header {
+  font-size: 1.6rem;
+}
+
+footer {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
 }
