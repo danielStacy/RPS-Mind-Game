@@ -20,6 +20,8 @@ body {
 
 header {
   font-size: 1.6rem;
+  padding-left: 3px;
+  padding-top: 3px;
 }
 
 footer {
@@ -35,10 +37,27 @@ footer {
   align-items: center;
 }
 
+.game-card {
+  border: solid 1px black;
+  border-radius: 10px;
+  margin: 30px;
+}
+
 .game-card img {
-  width: 200px;
+  width: 150px;
 }
 
 .dir-container p {
   text-align: center;
+  font-size: 1.6rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.img-container {
+  padding: 10px;
 }
