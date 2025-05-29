@@ -1,7 +1,4 @@
-export const [rock, paper, scissors] = ["rock", "paper", "scissors"];
-const hands = [rock, paper, scissors];
-export const [win, lose, tie] = ["win", "lose", "tie"];
-const directives = [win, lose, tie];
+import { Validator } from "./Validator";
 
 /**
  * Generate a random integer from a discrete uniform distribution.
@@ -20,7 +17,7 @@ export function getRandInt(min, max) {
  * @returns {string} "rock", "paper", or "scissors".
  */
 export function getRandomHand() {
-  return hands[getRandInt(0, hands.length - 1)];
+  return Validator.validHands[getRandInt(0, Validator.validHands.length - 1)];
 }
 
 /**
@@ -28,7 +25,9 @@ export function getRandomHand() {
  * @returns {string} "win", "lose", or "tie".
  */
 export function getRandomDirective() {
-  return directives[getRandInt(0, directives.length - 1)];
+  return Validator.validDirectives[
+    getRandInt(0, Validator.validDirectives.length - 1)
+  ];
 }
 
 /**

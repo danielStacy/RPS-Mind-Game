@@ -1,17 +1,16 @@
 import { RPSRound } from "../game-logic/RPSRound.js";
-import { InvalidHandError } from "../game-logic/InvalidHandError.js";
 
 describe("Testing constructor. Checking for throwing errors.", () => {
-  test("InvalidHandError thrown for hand state 1.", () => {
+  test("Error thrown for hand state 1.", () => {
     expect(() => {
       const testObj = new RPSRound("r0ck", "rock");
-    }).toThrow(InvalidHandError);
+    }).toThrow(Error);
   });
 
-  test("InvalidHandError thrown for hand state 2.", () => {
+  test("Error thrown for hand state 2.", () => {
     expect(() => {
       const testObj = new RPSRound("rock", "r0ck");
-    }).toThrow(InvalidHandError);
+    }).toThrow(Error);
   });
 
   test("No error thrown for valid state: 'rock'.", () => {

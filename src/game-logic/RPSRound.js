@@ -1,4 +1,4 @@
-import { InvalidHandError } from "./InvalidHandError.js";
+import { Validator } from "./Validator.js";
 
 /**
  * Class for a single round of rock-paper-scissors.
@@ -17,15 +17,8 @@ export class RPSRound {
   constructor(player1Hand, player2Hand) {
     const p1 = player1Hand.toLowerCase();
     const p2 = player2Hand.toLowerCase();
-    if (!this.#validateHand(p1) || !this.#validateHand(p2)) {
-      const errorMsg =
-        (!this.#validateHand(p1) && !this.#validateHand(p2)
-          ? `Invalid state: '${p1}', '${p2}' are not valid hands.`
-          : !this.#validateHand(p1)
-          ? `Invalid state: ${p1} is not valid.`
-          : `Invalid state: ${p2} is not valid.`) +
-        " Valid hands are: 'rock', 'paper', or 'scissors'.";
-      throw new InvalidHandError(errorMsg);
+    if (!Validator.isValidHand(p1) || !Validator.isValidHand(p2)) {
+      throw new Error("Invalid hand.");
     }
     this.#player1Hand = p1;
     this.#player2Hand = p2;
@@ -55,16 +48,6 @@ export class RPSRound {
    */
   get result() {
     return this.#result;
-  }
-
-  /**
-   * State validation method for the player1 and player2 hand state.
-   * @param {string} hand The hand to be validated.
-   * @returns {boolean} True is the hand  for that player is valid,
-   * otherwise false.
-   */
-  #validateHand(hand) {
-    return ["rock", "paper", "scissors"].includes(hand);
   }
 
   /**
