@@ -39,16 +39,14 @@ export class GameCard {
   }
 
   /**
-   * Description
-   * @returns {any}
+   * @returns {string} The rock-paper-scissors hand for the card object.
    */
   get hand() {
     return this.#hand;
   }
 
   /**
-   * Description
-   * @returns {any}
+   * @returns {string} The rock-paper-scissors directive for the card object.
    */
   get directive() {
     return this.#directive;
@@ -112,19 +110,35 @@ export class GameCard {
     return img;
   }
 
+  /**
+   * Hides the card from the DOM.
+   */
   hide() {
     this.#element.style.visibility = "hidden";
   }
 
+  /**
+   * Shows the card within the DOM.
+   */
   show() {
     this.#element.style.visibility = "visible";
   }
 
+  /**
+   * Adds a correct class to the card element.
+   * Allows for css styling to be selected with `.correct`.
+   * Removes any incorrect class for the element.
+   */
   addCorrectClass() {
     this.#element.classList.remove("incorrect");
     this.#element.classList.add("correct");
   }
 
+  /**
+   * Adds an incorrect class to the card element.
+   * Allows for css styling to be selected with `.incorrect`.
+   * Removes any correct class for the element.
+   */
   addIncorrectClass() {
     this.#element.classList.remove("correct");
     this.#element.classList.add("incorrect");
