@@ -21,6 +21,20 @@ export function getRandomHand() {
 }
 
 /**
+ * Generate a random vector of hands for n rock-paper-scissors rounds.
+ * @param {number} n Number of random hands.
+ * @returns {number[]} Array of random hands.
+ */
+export function getRandomHandVector(n) {
+  if (n <= 0) return [];
+  let randomHands = [];
+  for (let i = 0; i < n; i++) {
+    randomHands.push(getRandomHand());
+  }
+  return randomHands;
+}
+
+/**
  * Generate a random directive for a rock-paper-scissors round.
  * @returns {string} "win", "lose", or "tie".
  */
@@ -28,6 +42,20 @@ export function getRandomDirective() {
   return Validator.validDirectives[
     getRandInt(0, Validator.validDirectives.length - 1)
   ];
+}
+
+/**
+ * Generate a random vector of directives for n rock-paper-scissors rounds.
+ * @param {number} n Number of random directives.
+ * @returns {number[]} Array of random directives.
+ */
+export function getRandomDirectiveVector(n) {
+  if (n <= 0) return [];
+  let randomDirectives = [];
+  for (let i = 0; i < n; i++) {
+    randomDirectives.push(getRandomDirective());
+  }
+  return randomDirectives;
 }
 
 /**

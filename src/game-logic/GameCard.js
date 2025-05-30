@@ -11,7 +11,8 @@ import scissorsImg from "../img/scissors.svg";
 export class GameCard {
   #hand;
   #directive;
-  #card;
+  #element;
+  #result;
 
   /**
    * Constructor for a GameCard object.
@@ -27,14 +28,30 @@ export class GameCard {
     }
     this.#hand = hand.toLowerCase();
     this.#directive = directive.toLowerCase();
-    this.#card = this.#createCard();
+    this.#element = this.#createCard();
   }
 
   /**
    * @returns {HTMLElement} Div element representing this GameCard instance.
    */
-  get card() {
-    return this.#card;
+  get element() {
+    return this.#element;
+  }
+
+  /**
+   * Description
+   * @returns {any}
+   */
+  get hand() {
+    return this.#hand;
+  }
+
+  /**
+   * Description
+   * @returns {any}
+   */
+  get directive() {
+    return this.#directive;
   }
 
   /**
@@ -93,5 +110,23 @@ export class GameCard {
         throw new Error("Invalid hand.");
     }
     return img;
+  }
+
+  hide() {
+    this.#element.style.visibility = "hidden";
+  }
+
+  show() {
+    this.#element.style.visibility = "visible";
+  }
+
+  addCorrectClass() {
+    this.#element.classList.remove("incorrect");
+    this.#element.classList.add("correct");
+  }
+
+  addIncorrectClass() {
+    this.#element.classList.remove("correct");
+    this.#element.classList.add("incorrect");
   }
 }
