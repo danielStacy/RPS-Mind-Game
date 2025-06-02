@@ -1,4 +1,4 @@
-import { Validator } from "./Validator";
+import { Validator } from "./Validator.js";
 
 /**
  * Generate a random integer from a discrete uniform distribution.

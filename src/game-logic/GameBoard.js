@@ -28,7 +28,7 @@ export class GameBoard {
       const handler = (event) => {
         this.#boardElement.dispatchEvent(
           new CustomEvent(handSelectEvent, {
-            detail: { hand: event.target.textContent },
+            detail: { hand: event.target.dataset.hand },
           })
         );
       };
@@ -130,19 +130,25 @@ export class GameBoard {
 
   /**
    * Disables buttons from triggering clickable events.
+   * Adds CSS class `disabled` to all buttns.
    */
   disableButtons() {
     this.#buttons.forEach((btn) => {
       btn.element.disabled = true;
+      btn.element.classList.remove("enabled");
+      btn.element.classList.add("disabled");
     });
   }
 
   /**
    * Enables buttons from triggering clickable events.
+   * Adds CSS class `enabled` to all buttns.
    */
   enableButtons() {
     this.#buttons.forEach((btn) => {
       btn.element.disabled = false;
+      btn.element.classList.remove("disabled");
+      btn.element.classList.add("enabled");
     });
   }
 }
