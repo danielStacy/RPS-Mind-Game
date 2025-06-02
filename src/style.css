@@ -2,6 +2,13 @@
   /* Simplify font size calculations: 1rem = 10px on browser default 16px font-size.  */
   font-size: 62.5%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Colour variables */
+  --element-lightbrown: #fbeee0;
+  --header-brown: #422800;
+  --game-gard-mildwhite: rgb(250, 250, 250);
+  --correct-green: #3bb34c;
+  --incorrect-red: #fe0000;
 }
 
 * {
@@ -12,7 +19,6 @@
 body {
   height: 100vh;
   width: 100vw;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,16 +31,13 @@ main {
   align-items: center;
   padding-top: 20px;
   gap: 20px;
-
   height: 100%;
   width: 100%;
-
-  background: #fbeee0;
-  background: linear-gradient(
+  background-image: linear-gradient(
     0deg,
-    rgba(251, 238, 224, 1) 0%,
-    rgba(255, 255, 255, 1) 51%,
-    rgba(251, 238, 224, 1) 100%
+    var(--element-lightbrown) 0%,
+    var(--game-gard-mildwhite) 51%,
+    var(--element-lightbrown) 100%
   );
 }
 
@@ -42,12 +45,14 @@ header {
   font-size: 2.4rem;
   padding: 0.4rem;
   font-weight: bold;
+  border-bottom: 10px solid var(--element-lightbrown);
 }
 
 footer {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 0.4rem;
   font-weight: bold;
+  border-top: 10px solid var(--element-lightbrown);
 }
 
 .game-board {
@@ -65,6 +70,7 @@ footer {
   align-items: center;
   height: 50%;
   gap: 20px;
+  background-color: var(--game-gard-mildwhite);
 }
 
 .game-card .img-container {
@@ -96,37 +102,29 @@ button {
 button,
 .game-card,
 .game-board {
-  background-color: #fbeee0;
-  border: 2px solid #422800;
+  border: 2px solid var(--header-brown);
   border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
-  color: #422800;
+  box-shadow: var(--header-brown) 4px 4px 0 0;
+  color: var(--header-brown);
 }
 
-.game-card {
-  background-color: rgb(250, 250, 250);
+button,
+.game-board {
+  background-color: var(--element-lightbrown);
 }
 
 header,
 footer {
-  background-color: #422800;
-  color: #fbeee0;
-}
-
-header {
-  border-bottom: 10px solid #fbeee0;
-}
-
-footer {
-  border-top: 10px solid #fbeee0;
+  background-color: var(--header-brown);
+  color: var(--element-lightbrown);
 }
 
 .correct {
-  background-color: rgb(128, 241, 128);
+  background-color: var(--correct-green);
 }
 
 .incorrect {
-  background-color: rgb(241, 128, 128);
+  background-color: var(--incorrect-red);
 }
 
 /* more button stuff */
@@ -139,11 +137,11 @@ button {
 }
 
 button:hover {
-  background-color: #fff;
+  background-color: var(--game-gard-mildwhite);
 }
 
 button:active {
-  box-shadow: #422800 2px 2px 0 0;
+  box-shadow: var(--header-brown) 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
 
