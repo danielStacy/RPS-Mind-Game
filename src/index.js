@@ -10,11 +10,13 @@ const gameBoardElement = document.querySelector(".game-board");
 const buttonNodeList = document.querySelectorAll(".btn-hand");
 
 howToBtn.addEventListener("click", () => {
+  gameController.disableInput();
   howToModal.style.visibility = "visible";
 });
 
 modalCloseBtn.addEventListener("click", () => {
   howToModal.style.visibility = "hidden";
+  gameController.enableInput();
 })
 
 const gameBoard = new GameBoard(gameBoardElement, buttonNodeList);

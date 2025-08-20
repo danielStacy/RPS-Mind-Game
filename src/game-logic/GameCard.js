@@ -1,5 +1,6 @@
 import { Validator } from "./Validator";
 
+// maybe not the best idea to keep these within the class
 import rockImg from "../img/rock.svg";
 import paperImg from "../img/paper.svg";
 import scissorsImg from "../img/scissors.svg";
@@ -12,7 +13,6 @@ export class GameCard {
   #hand;
   #directive;
   #element;
-  #result;
 
   /**
    * Constructor for a GameCard object.

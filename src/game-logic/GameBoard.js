@@ -106,7 +106,6 @@ export class GameBoard {
 
   /**
    * Hides all cards from the DOM on the game board.
-   * @returns {any}
    */
   hideCards() {
     for (const card of this.#cards) {
@@ -116,7 +115,6 @@ export class GameBoard {
 
   /**
    * Shows all cards from the DOM on the game board.
-   * @returns {any}
    */
   showCards() {
     for (const card of this.#cards) {

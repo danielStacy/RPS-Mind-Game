@@ -70,10 +70,10 @@ export class GameController {
    * Easy mode consists of a single game card.
    */
   async #playEasyGame() {
-    this.#disableInput();
+    this.disableInput();
     await this.#pause(startRoundPause);
     this.#gameBoard.addCard(getRandomHand(), getRandomDirective());
-    this.#enableInput();
+    this.enableInput();
     const playerHand = await this.#waitHandSelect();
     const result = await this.#playCard(playerHand, this.#gameBoard.card);
     await this.#pause(endRoundPause);
@@ -84,13 +84,13 @@ export class GameController {
    * Medium mode consists of a single, disappearing game card.
    */
   async #playMediumGame() {
-    this.#disableInput();
+    this.disableInput();
     await this.#pause(startRoundPause);
     this.#gameBoard.addCard(getRandomHand(), getRandomDirective());
     await this.#pause(mediumLevelShowCardPause);
     this.#gameBoard.card.hide();
     await this.#pause(mediumLevelAfterHideCardPause);
-    this.#enableInput();
+    this.enableInput();
     const playerHand = await this.#waitHandSelect();
     const result = await this.#playCard(playerHand, this.#gameBoard.card);
     await this.#pause(endRoundPause);
@@ -102,7 +102,7 @@ export class GameController {
    */
   async #playHardGame() {
     const nCards = 3;
-    this.#disableInput();
+    this.disableInput();
     await this.#pause(startRoundPause);
     for (let i = 0; i < nCards; i++) {
       this.#gameBoard.addCard(getRandomHand(), getRandomDirective());
@@ -110,7 +110,7 @@ export class GameController {
     await this.#pause(hardLevelShowCardPause);
     this.#gameBoard.hideCards();
     await this.#pause(hardLevelAfterHideCardPause);
-    this.#enableInput();
+    this.enableInput();
     for (const card of this.#gameBoard.allCards) {
       const playerHand = await this.#waitHandSelect();
       const result = await this.#playCard(playerHand, card);
@@ -186,7 +186,7 @@ export class GameController {
   /**
    * Enables input for the game board buttons.
    */
-  #enableInput() {
+  enableInput() {
     this.#gameBoard.enableButtons();
   }
 
@@ -195,7 +195,7 @@ export class GameController {
    * Allows input to be frozen until needed. Use the enableInput() method to re-
    * enable.
    */
-  #disableInput() {
+  disableInput() {
     this.#gameBoard.disableButtons();
   }
 
