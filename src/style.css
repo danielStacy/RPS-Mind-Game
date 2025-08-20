@@ -46,7 +46,8 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  min-width: 80vw;
+  min-height: 50vh;
 }
 
 .game-card {
@@ -55,7 +56,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin: 3rem 0;
   background-color: var(--game-gard-mildwhite);
   padding: 1.5rem;
 }
