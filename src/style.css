@@ -95,7 +95,7 @@ button,
 .game-card,
 .game-board {
   border: 2px solid var(--header-footer-col);
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: var(--header-footer-col) 4px 4px 0 0;
   color: var(--header-footer-col);
 }
