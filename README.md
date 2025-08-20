@@ -43,3 +43,4 @@ To quickly rapid-fire list some technologies used:
 - Bundler: Webpack with manual config
 - Version control: Git (CLI) + Github
 - HTML + CSS (minimal)
+- JSDOC
