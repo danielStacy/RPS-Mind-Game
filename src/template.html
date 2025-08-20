@@ -7,11 +7,13 @@
   </head>
   <body>
     <header>
-      <h1>Rock Paper Scissors, but a little different</h1>
-      <button id="how-to-btn">How to play</button>
+      <div class="content-container">
+        <h1>Rock Paper Scissors, but a little different</h1>
+        <button id="how-to-btn">How to play</button>
+      </div>
     </header>
     <main>
-      <div class="game-board"></div>
+      <div class="game-board content-container"></div>
       <div class="button-container">
         <button class="btn-hand btn-rock" data-hand="rock">Rock</button>
         <button class="btn-hand btn-paper" data-hand="paper">Paper</button>
@@ -20,37 +22,35 @@
         </button>
       </div>
 
-      <div class="modal how-to-play">
-        <h2>How to Play</h2>
+      <div class="modal how-to-play content-container">
         <div class="modal-content-container">
           <img
+            class="modal-img"
             src="./img/example-hand.png"
             alt="example card of rock with lose condition"
-            loading="eager"
           />
           <div class="text-container">
+            <h2>How to Play</h2>
             <p>Behold, your opponents hand! What will you do?</p>
             <p>In this game, your aim is <i>not always</i> to "win".</p>
             <p>
               Each round you must aim to satisfy the <b>condition</b> marked on
-              each card. Here, your opponent is playing ROCK. What hand must you
-              play to to lose?
+              each card. Here, your opponent is playing <b>ROCK</b> and your condition
+              is to <b>LOSE</b>. What hand must you play to to lose?
             </p>
             <p>
-              So in this round, your aim is to lose. Rock beats paper, so you
-              must play paper to win.
+              Paper will lose against rock, so here you must play paper.
             </p>
-            <p>
-              So, sometimes in this game, to win is to lose... or win.. or
-              tie... or lose...
-            </p>
+            <p>So, sometimes in this game, to win... is to lose...</p>
           </div>
         </div>
-        <button class="close-modal">  x</button>
+        <button class="close-modal-btn">&#x2715;</button>
       </div>
     </main>
     <footer>
-      <p>Daniel Stacy</p>
+      <div class="content-container">
+        <p>Daniel Stacy</p>
+      </div>
     </footer>
   </body>
 </html>
