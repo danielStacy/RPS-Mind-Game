@@ -1,9 +1,5 @@
 import { GameCard } from "./GameCard.js";
 
-// ???
-// consider allowing add/remove of button event listeners.
-// Set event listener method.
-
 const handSelectEvent = "handSelect";
 
 /**
