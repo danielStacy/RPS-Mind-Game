@@ -10,13 +10,11 @@ const gameBoardElement = document.querySelector(".game-board");
 const buttonNodeList = document.querySelectorAll(".btn-hand");
 
 howToBtn.addEventListener("click", () => {
-  hotToModal.classList.remove("invisisble");
-  hotToModal.classList.add("visible");
+  hotToModal.style.visibility = "visible";
 });
 
 modalCloseBtn.addEventListener("click", () => {
-  hotToModal.classList.remove("visible");
-  hotToModal.classList.add("invisisble");
+  hotToModal.style.visibility = "hidden";
 })
 
 const gameBoard = new GameBoard(gameBoardElement, buttonNodeList);

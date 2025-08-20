@@ -8,6 +8,7 @@
   <body>
     <header>
       <h1>Rock Paper Scissors, but a little different</h1>
+      <button id="how-to-btn">How to play</button>
     </header>
     <main>
       <div class="game-board"></div>
@@ -19,21 +20,23 @@
         </button>
       </div>
 
-      <button id="how-to-btn">How to play</button>
-      <div class="modal how-to-play visible">
+      <div class="modal how-to-play">
         <h2>How to Play</h2>
         <div class="modal-content-container">
           <img
             src="./img/example-hand.png"
             alt="example card of rock with lose condition"
+            loading="eager"
           />
           <div class="text-container">
             <p>Behold, your opponents hand! What will you do?</p>
+            <p>In this game, your aim is <i>not always</i> to "win".</p>
             <p>
-              In this game, your aim is <i>not always</i> to "win". <br />
               Each round you must aim to satisfy the <b>condition</b> marked on
               each card. Here, your opponent is playing ROCK. What hand must you
-              play to to lose? <br />
+              play to to lose?
+            </p>
+            <p>
               So in this round, your aim is to lose. Rock beats paper, so you
               must play paper to win.
             </p>
@@ -43,7 +46,7 @@
             </p>
           </div>
         </div>
-        <button class="close-modal">x</button>
+        <button class="close-modal">  x</button>
       </div>
     </main>
     <footer>
