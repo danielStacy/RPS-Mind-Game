@@ -44,3 +44,13 @@ To quickly rapid-fire list some technologies used:
 - Version control: Git (CLI) + Github
 - HTML + CSS (minimal)
 - JSDOC
+
+## Statement on the use of AI
+
+At no point during the development of this project was any AI/LLM used.
+
+All design and code was created by me, Daniel Stacy. 
+
+All errors and bugs were both created and fixed by me, Daniel Stacy, through
+the use of a debugger (and embarrassingly, sometimes the use of a console.log), 
+or by consulting the docs.
