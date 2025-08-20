@@ -6,6 +6,10 @@ This project was a short learning experience predominantly utilising vanilla Jav
 
 Live link: https://danielstacy.github.io/RPS-Mind-Game/
 
+By no means is this project perfect. This was made after several months of learning
+HTML, CSS, and JS. This game was made over a week or two of my free time, and recently
+updated - mainly styling - over one day.
+
 ## How to play
 
 Play a round of rock-paper-scissors against the computer. 
@@ -13,6 +17,8 @@ However, each card specifies a condition stating whether you need to *win*,
 *lose*, or *tie* against your opponent's hand.
 
 The difficulty ramps up with timed-disappearing cards and simultaneous cards on each round.
+
+This game is meant to be played on a computer monitor and not on a mobile device.
 
 ## Skills Showcase
 
@@ -45,7 +51,7 @@ To quickly rapid-fire list some technologies used:
 - Bundler: Webpack with manual config
 - Version control: Git (CLI) + Github
 - HTML + CSS (minimal)
-- JSDOC
+- JSDoc
 
 ## Statement on the use of AI
 
