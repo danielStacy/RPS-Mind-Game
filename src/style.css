@@ -141,3 +141,31 @@ button:active {
 button:hover.disabled {
   background-color: darkgrey;
 }
+
+.modal.how-to-play {
+  position: relative;
+  visibility: hidden;
+  width: 60vmin;
+  height: 60vmin;
+}
+
+.modal.how-to-play.visisble {
+  visibility: visible;
+}
+
+.modal.how-to-play.invisisble {
+  visibility: hidden;
+}
+
+.modal-content-container {
+  display: flex;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.4rem;
+  border: solid 2px black;
+  border-radius: 50%;
+}

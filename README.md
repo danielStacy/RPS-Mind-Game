@@ -4,6 +4,8 @@ A single-player rock-paper-scissors mind game.
 
 This project was a short learning experience predominantly utilising vanilla Javascript.
 
+Live link: https://danielstacy.github.io/RPS-Mind-Game/
+
 ## How to play
 
 Play a round of rock-paper-scissors against the computer. 
