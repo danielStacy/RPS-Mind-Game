@@ -6,7 +6,8 @@
     "test": "jest",
     "build": "webpack",
     "serve": "webpack serve",
-    "go": "webpack && webpack serve"
+    "go": "webpack && webpack serve",
+    "buildp": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
