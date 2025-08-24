@@ -5,6 +5,7 @@ import { GameController } from "./game-logic/GameController.js";
 const howToBtn = document.querySelector("#how-to-btn");
 const howToModal = document.querySelector(".modal.how-to-play");
 const modalCloseBtn = document.querySelector(".close-modal-btn");
+const startBtn = document.querySelector(".start-game-btn")
 
 const gameBoardElement = document.querySelector(".game-board");
 const buttonNodeList = document.querySelectorAll(".btn-hand");
@@ -22,4 +23,11 @@ modalCloseBtn.addEventListener("click", () => {
 const gameBoard = new GameBoard(gameBoardElement, buttonNodeList);
 const gameController = new GameController(gameBoard);
 
-gameController.startGame();
+startBtn.addEventListener("click", () => {
+  document.querySelector(".start-game-modal").style.visibility = "hidden";
+  gameController.startGame();
+});
+
+
+
+

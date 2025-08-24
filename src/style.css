@@ -148,7 +148,6 @@ button:hover.disabled {
 
 .modal {
   min-height: 50vh;
-  visibility: hidden;
   z-index: 1;
   background-color: white;
   padding: 2rem;
@@ -156,8 +155,17 @@ button:hover.disabled {
   border: solid 2px black;
   border-radius: 10px;
   line-height: 1.25;
-
   overflow: auto;
+}
+
+.how-to-play {
+  visibility: hidden;
+}
+
+.start-game-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal h2 {
