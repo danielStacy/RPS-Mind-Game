@@ -39,9 +39,20 @@ export function getRandomHandVector(n) {
  * @returns {string} "win", "lose", or "tie".
  */
 export function getRandomDirective() {
-  return Validator.validDirectives[
-    getRandInt(0, Validator.validDirectives.length - 1)
-  ];
+  let directive =
+    Validator.validDirectives[
+      getRandInt(0, Validator.validDirectives.length - 1)
+    ];
+  
+  // ties make the game too easy, so make it less likely to draw a tie
+  if (directive === Validator.tie) {
+    directive =
+      Validator.validDirectives[
+        getRandInt(0, Validator.validDirectives.length - 1)
+      ];
+  }
+
+  return directive;
 }
 
 /**
